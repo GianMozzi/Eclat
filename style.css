@@ -48,6 +48,7 @@ body {
 
 .icons a {
     text-decoration: none;
+    color: #1c2b4a;
 }
 
 /* CENTER */
@@ -58,22 +59,6 @@ body {
 .header-center img {
     height: 100px;
 }
-
-/* si usás texto en lugar de imagen */
-/*
-.header-center h1 {
-    font-size: 28px;
-    letter-spacing: 2px;
-    color: #1c2b4a;
-}
-
-.header-center span {
-    font-size: 10px;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: 4px;
-}
-*/
 
 /* RIGHT */
 .header-right {
