@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Georgia", serif;
-    
 }
 
 body {
@@ -17,8 +16,6 @@ body {
     align-items: center;
     padding: 20px 40px;
     background-color: #f6eaea;
-    
-    
 }
 
 /* LEFT */
@@ -195,7 +192,6 @@ body {
 
 .product {
     text-align: center;
-    
 }
 
 .product h3 {
