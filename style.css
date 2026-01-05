@@ -33,19 +33,6 @@ body {
     align-items: center;
 }
 
-/* ocultamos el checkbox pero sigue funcionando */
-#menu-toggle {
-    display: none;
-}
-
-/* icono menú */
-.menu-icon {
-    font-size: 26px;
-    color: #1c2b4a;
-    cursor: pointer;
-    text-decoration: none;
-}
-
 .icons a {
     text-decoration: none;
     color: #1c2b4a;
