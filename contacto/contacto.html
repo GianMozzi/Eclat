@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | ÉCLAT</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="../index.html" class="logo">ÉCLAT</a>
+    </header>
+
+    <main class="contact">
+        <div class="contact-container">
+
+            <h1>Contacto</h1>
+            <p>¿Tenés una consulta o querés hacer un pedido especial?<br>
+                Escribinos y te respondemos a la brevedad ✨</p>
+
+            <form class="contact-form" action="https://formspree.io/f/moqropgo" method="POST">
+
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde ÉCLAT">
+
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+
+
+            <div class="contact-info">
+                <a href="https://wa.me/5491136324877" target="_blank">
+                    <i class="bx bxl-whatsapp"></i> WhatsApp
+                </a>
+                <a href="mailto:contacto@eclat.com">
+                    <i class="bx bx-envelope"></i> Email
+                </a>
+                <a href="https://www.instagram.com/_eclatcandles/" target="_blank">
+                    <i class="bx bxl-instagram"></i> Instagram
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Gianni Mozzi · Frontend Developer</p>
+    </footer>
+
+</body>
+
+</html>
