@@ -2,17 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Georgia", serif;
+    font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 body {
-    background-color: #f6ebe8;
+    background-color: #f7ebed;
     color: #1c2b4a;
     
 }
 
 .logo {
-    font-size: 20px;
+    font-family: "Gloock", "Georgia", serif;
+    font-size: 24px;
     font-weight: bold;
     color: #1c2b4a;
     text-decoration: none;
@@ -24,7 +25,7 @@ body {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     padding: 20px 50px;
-    background-color: #f6eaea;
+    background-color: #f7ebed;
     border-bottom: 1px solid rgba(28, 43, 74, 0.08);
 }
 
@@ -87,7 +88,9 @@ body {
 
 
 .contact-container h1 {
-    font-size: 32px;
+    font-family: "Gloock", "Georgia", serif;
+    font-weight: 400;
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
@@ -152,3 +155,23 @@ body {
     font-size: 12px;
     color: #777;
 }
+
+/* Botón flotante de WhatsApp */
+.wa-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 80;
+    transition: transform 0.2s ease;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 32px; height: 32px; }

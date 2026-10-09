@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Éclat</title>
+    <title>Éclat · Velas artesanales</title>
+    <meta name="description" content="Velas artesanales de cera vegetal, hechas a mano. Elegí tu aroma y pedí por WhatsApp.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/img/logo.jpeg">
     <link rel="stylesheet" href="style.css">
 
     <!-- https://v2.boxicons.com/ -->
@@ -15,38 +21,57 @@
 <body>
 
 <header class="header">
-    <div class="header-left">
-        <a href="contacto/contacto.html" class="Contacto">Contacto</a>
-    </div>
+    <nav class="header-left" aria-label="Principal">
+        <a href="#collection">Velas</a>
+        <a href="contacto/contacto.html">Contacto</a>
+    </nav>
 
-    <div class="header-center">
-        <!-- LOGO -->
-        <img src="assets/img/logo.jpeg" alt="Éclat logo">
-    </div>
+    <a class="header-center" href="#top" aria-label="Éclat, inicio">
+        <img src="assets/img/logo.jpeg" alt="Éclat · Artesanal Candles">
+    </a>
 
     <div class="icons">
-        <a href="https://www.instagram.com/_eclatcandles/" target="_blank" class="instagram">
+        <a href="https://www.instagram.com/_eclatcandles/" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
             <i class="ri-instagram-line"></i>
         </a>
-        <a href="https://wa.me/5491136324877" target="_blank" class="WhatsApp">
+        <a href="https://wa.me/5491136324877" target="_blank" rel="noopener" class="WhatsApp" aria-label="WhatsApp">
             <i class="ri-whatsapp-line"></i>
         </a>
+        <button id="cart-open" class="cart-btn" aria-label="Abrir carrito">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            <span id="cart-count" class="cart-count" hidden>0</span>
+        </button>
     </div>
 </header>
 
+<main id="top">
+
 <section class="hero">
-    <div class="carousel">
-        <img src="assets/img/carrusel1.jpeg" alt="vela1">
-        <img src="assets/img/carrusel2.jpeg" alt="vela2">
-        <img src="assets/img/carrusel3.jpeg" alt="vela3">
-        <img src="assets/img/carrusel4.jpeg" alt="vela4">
+    <div class="hero-copy">
+        <h1>Iluminá tus momentos.</h1>
+        <p>Velas artesanales de cera vegetal, hechas a mano.</p>
+        <div class="hero-actions">
+            <a href="#collection" class="btn">Ver las velas</a>
+            <a href="https://wa.me/5491136324877" target="_blank" rel="noopener" class="link">Consultar por WhatsApp</a>
+        </div>
     </div>
 
-    <div class="hero-text">
-        <h2>Iluminá tus momentos</h2>
-        <p>Velas artesanales hechas a mano</p>
-        <a href="#collection" class="btn">Ver productos</a>
+    <div class="hero-visual">
+        <img src="assets/img/hero.jpg" alt="Velas Pure Calm y Red Pasion sobre una tabla de madera" fetchpriority="high">
+        <a class="hero-tag" href="#collection">
+            <strong>Pure Calm.</strong>
+            <span>Verbena · 250 g</span>
+        </a>
     </div>
+</section>
+
+<section class="collection" id="collection">
+    <div class="section-head">
+        <h2>Nuestras velas</h2>
+        <p>Elegí tu aroma, sumalo al carrito y mandanos el pedido por WhatsApp.</p>
+    </div>
+
+    <div class="products" id="products"></div>
 </section>
 
 <section class="about">
@@ -60,43 +85,23 @@
         </p>
     </div>
 
-    <div class="about-benefits">
-        <div class="benefit">
-            🌿 <span>Cera vegetal natural</span>
-        </div>
-        <div class="benefit">
-            🕯 Hechas a mano
-        </div>
-        <div class="benefit">
-            ♻ Producción consciente
-        </div>
-        <div class="benefit">
-            ✨ Aromas suaves y duraderos
-        </div>
-    </div>
+    <ul class="about-benefits">
+        <li>Cera vegetal natural</li>
+        <li>Hechas a mano</li>
+        <li>Producción consciente</li>
+        <li>Aromas suaves y duraderos</li>
+    </ul>
 </section>
 
-<section class="collection" id="collection">
-    <h2>Nuestras velas</h2>
-
-    <div class="products">
-        <article class="product">
-            <img src="assets/img/verbena.jpeg" alt="Verbena">
-            <h3>Verbena</h3>
-            <!-- <p>$7.000</p> -->
-        </article>
-
-        <article class="product">
-            <img src="assets/img/frutosrojos.jpeg" alt="FrutosRojos">
-            <h3>Frutos Rojos</h3>
-            <!-- <p>$7.000</p> -->
-        </article>
-
-        <article class="product">
-            <img src="assets/img/verbena.jpeg" alt="CocoVainilla">
-            <h3>Coco y Vanilla</h3>
-            <!-- <p>$7.000</p> -->
-        </article>
+<section class="gallery">
+    <h2>Así se ven en casa</h2>
+    <div class="gallery-grid">
+        <img src="assets/img/galeria-bandeja.jpg" alt="Tres velas Éclat sobre una bandeja blanca, una de ellas encendida" loading="lazy">
+        <img src="assets/img/galeria-mano.jpg" alt="Vela Pure Calm sostenida en la mano" loading="lazy">
+        <img src="assets/img/galeria-copa.jpg" alt="Vela en copa de vidrio acanalado con tapa" loading="lazy">
+        <img src="assets/img/galeria-madera.jpg" alt="Velas Red Pasion y Pure Calm sobre un bloque de madera" loading="lazy">
+        <img src="assets/img/galeria-frascos.jpg" alt="Velas Pure Calm y Red Pasion sobre una tela blanca" loading="lazy">
+        <img src="assets/img/galeria-copa-tela.jpg" alt="Vela en copa de vidrio con tapa sobre una tela gris" loading="lazy">
     </div>
 </section>
 
@@ -104,25 +109,27 @@
     <h2>Instrucciones de uso</h2>
 
     <ul class="instructions-list">
-        <li>🕯 Encendé la vela sobre una superficie plana y resistente al calor.</li>
-        <li>⏳ Dejá que la cera se derrita por completo en el primer uso.</li>
-        <li>✂️ Recortá la mecha a 5 mm antes de cada encendido.</li>
-        <li>🕰 No la dejes encendida más de 3 horas seguidas.</li>
-        <li>🚫 Mantenela fuera del alcance de niños y mascotas.</li>
+        <li>Encendé la vela sobre una superficie plana y resistente al calor.</li>
+        <li>Dejá que la cera se derrita por completo en el primer uso.</li>
+        <li>Recortá la mecha a 5 mm antes de cada encendido.</li>
+        <li>No la dejes encendida más de 3 horas seguidas.</li>
+        <li>Mantenela fuera del alcance de niños y mascotas.</li>
     </ul>
 </section>
 
+</main>
+
 <footer class="footer">
     <div class="footer-icons">
-        <a href="https://wa.me/5491123046617" target="_blank" aria-label="WhatsApp">
+        <a href="https://wa.me/5491123046617" target="_blank" rel="noopener" aria-label="WhatsApp">
             <i class='bx bxl-whatsapp'></i>
         </a>
 
-        <a href="https://www.instagram.com/gian.mozzi/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/gian.mozzi/" target="_blank" rel="noopener" aria-label="Instagram">
             <i class='bx bxl-instagram'></i>
         </a>
 
-        <a href="https://github.com/GianMozzi" target="_blank" aria-label="GitHub">
+        <a href="https://github.com/GianMozzi" target="_blank" rel="noopener" aria-label="GitHub">
             <i class='bx bxl-github'></i>
         </a>
 
@@ -134,7 +141,36 @@
     <p>© 2026 Gianni Mozzi · Frontend Developer</p>
 </footer>
 
+<!-- CARRITO -->
+<div id="cart-overlay" class="cart-overlay"></div>
+<aside id="cart-drawer" class="cart-drawer" aria-hidden="true" aria-label="Carrito de compras">
+    <div class="cart-head">
+        <h2>Tu carrito</h2>
+        <button id="cart-close" class="cart-close" aria-label="Cerrar carrito">×</button>
+    </div>
 
+    <p id="cart-empty" class="cart-empty">Todavía no agregaste velas. Elegí tu aroma favorito y aparece acá.</p>
+    <ul id="cart-items" class="cart-items"></ul>
 
+    <div id="cart-footer" class="cart-footer" hidden>
+        <div class="cart-total-row">
+            <span>Total</span>
+            <strong id="cart-total">$0</strong>
+        </div>
+        <a id="whatsapp-checkout" class="checkout-btn" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.003 3C8.83 3 3 8.83 3 16c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.71A12.94 12.94 0 0 0 16.003 29C23.17 29 29 23.17 29 16S23.17 3 16.003 3Zm0 23.7c-2 0-3.96-.54-5.67-1.56l-.41-.24-3.97 1.01 1.06-3.87-.27-.4A10.66 10.66 0 0 1 5.3 16c0-5.88 4.82-10.7 10.7-10.7S26.7 10.12 26.7 16s-4.82 10.7-10.7 10.7Zm5.87-8c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.51-.16-.73.16-.21.32-.83 1.04-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.67s1.15 3.1 1.31 3.31c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.52 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.9-.78 2.16-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>
+            Pedir por WhatsApp
+        </a>
+        <button id="cart-clear" class="clear-btn">Vaciar carrito</button>
+    </div>
+</aside>
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a class="wa-float" href="https://wa.me/5491136324877?text=%C2%A1Hola%20%C3%89clat!%20Quisiera%20hacer%20una%20consulta."
+   target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.003 3C8.83 3 3 8.83 3 16c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.71A12.94 12.94 0 0 0 16.003 29C23.17 29 29 23.17 29 16S23.17 3 16.003 3Zm0 23.7c-2 0-3.96-.54-5.67-1.56l-.41-.24-3.97 1.01 1.06-3.87-.27-.4A10.66 10.66 0 0 1 5.3 16c0-5.88 4.82-10.7 10.7-10.7S26.7 10.12 26.7 16s-4.82 10.7-10.7 10.7Zm5.87-8c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.51-.16-.73.16-.21.32-.83 1.04-1.02 1.26-.19.21-.37.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.67s1.15 3.1 1.31 3.31c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.52 1.82.67.77.24 1.46.21 2.01.13.61-.09 1.9-.78 2.16-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg>
+</a>
+
+<script src="js/app.js"></script>
 </body>
 </html>
